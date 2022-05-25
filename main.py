@@ -33,7 +33,7 @@ async def send_help(message: types.Message):
 async def tarjimon(message: types.Message):
 
     lang = translator.detect(message.text).lang
-
+    # Bu yerda ikki so'zdan ko'pligi tekshiriladi
     if len(message.text.split()) > 2:
         dest = 'uz' if lang =='en' else 'en'
         await message.reply(translator.translate(message.text,dest).text)
